@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Player Stats</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Untitled design (19).png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="Untitled design (19).png">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="stats.html">Stats</a></li>
+                <li><a href="players.html">Players</a></li>
+            </ul>
+        </nav>
+        <img src="Untitled design (19).png" alt="Logo" class="logo">
+        <h1>PLAYER STATS</h1>
+        <div id="statsTableContainer">
+            <table id="statsTable">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Played</th>
+                        <th>Goals</th>
+                        <th>Assists</th>
+                        <th>Shots</th>
+                        <th>Shot Accuracy (%)</th>
+                        <th>Passes</th>
+                        <th>Pass Attempts</th>
+                        <th>Pass Accuracy (%)</th>
+                        <th>Saves</th>
+                        <th>Conceded</th>
+                        <th>Save Accuracy (%)</th>
+                        <th>Dribbles</th>
+                        <th>DSR (%)</th>
+                        <th>Tackles</th>
+                        <th>TSR (%)</th>
+                        <th>Offsides</th>
+                        <th>Fouls</th>
+                        <th>Possession Won</th>
+                        <th>Possession Lost</th>
+                        <th>Distance Covered (Km)</th>
+                        <th>MOTM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be dynamically populated -->
+                </tbody>
+            </table>
+        </div>
+        <p id="message"></p>
+    </div>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="stats.js"></script>
+</body>
+</html>
