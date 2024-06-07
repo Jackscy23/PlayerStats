@@ -1,15 +1,19 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
+document.getElementById('loginForm').addEventListener('submit', login);
+
+function login(event) {
     event.preventDefault();
 
     const username = document.getElementById('username').value;
-    const pin = document.getElementById('pin').value;
+    const pincode = document.getElementById('pincode').value;
 
-    // Validate the username and PIN
-    if (username === 'player' && pin === '1234') {
-        // Redirect to the stats page after successful login
-        window.location.href = 'stats.html';
+    // Perform authentication
+    if (username === "admin" && pincode === "admin123") {
+        // Redirect to admin home page
+        window.location.href = "admin_home.html";
+    } else if (username === "player" && pincode === "player123") {
+        // Redirect to player home page
+        window.location.href = "player_home.html";
     } else {
-        // Show error message
-        document.getElementById('message').innerText = 'Invalid username or PIN. Please try again.';
+        document.getElementById('message').innerText = 'Invalid username or pincode';
     }
-});
+}
