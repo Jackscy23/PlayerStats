@@ -3,93 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Google Sheet</title>
+    <title>Login</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="Untitled design (19).png" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="Untitled design (19).png">
 </head>
 <body>
     <div class="container">
-        <nav>
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="stats.html">Stats</a></li>
-                <li><a href="#players">Players</a></li>
-            </ul>
-        </nav>
-        <img src="Untitled design (19).png" alt="Logo" class="logo"> <!-- Add your logo here -->
-        <h1>PLAYER STATS</h1>
-        <form id="updateForm">
-            <label for="matchType">Match Type:</label>
-            <select id="matchType" name="matchType" required>
-                <option value="league">League</option>
-                <option value="tournament">Tournament</option>
-                <option value="friendly">Friendly</option>
-            </select>
-            <label for="matchName">Match Name:</label>
-            <input type="text" id="matchName" name="matchName" required>
-            <label for="player">Player:</label>
-            <select id="player" name="player" required>
-                <!-- Options will be dynamically populated -->
-            </select>
-            <label for="played">Played:</label>
-            <input type="number" id="played" name="played" required>
-            <label for="goals">Goals:</label>
-            <input type="number" id="goals" name="goals" required>
-            <label for="assists">Assists:</label>
-            <input type="number" id="assists" name="assists" required>
-            <label for="shots">Shots:</label>
-            <input type="number" id="shots" name="shots" required>
-            <label for="shotAccuracy">Shot Accuracy (%):</label>
-            <input type="number" id="shotAccuracy" name="shotAccuracy" required>
-            <label for="passes">Passes:</label>
-            <input type="number" id="passes" name="passes" required>
-            <label for="passAttempts">Pass Attempts:</label>
-            <input type="number" id="passAttempts" name="passAttempts" required>
-            <label for="passAccuracy">Pass Accuracy (%):</label>
-            <input type="number" id="passAccuracy" name="passAccuracy" required>
-            <label for="saves">Saves:</label>
-            <input type="number" id="saves" name="saves" required>
-            <label for="conceded">Conceded:</label>
-            <input type="number" id="conceded" name="conceded" required>
-            <label for="saveAccuracy">Save Accuracy (%):</label>
-            <input type="number" id="saveAccuracy" name="saveAccuracy" required>
-            <label for="dribbles">Dribbles:</label>
-            <input type="number" id="dribbles" name="dribbles" required>
-            <label for="dsr">DSR (%):</label>
-            <input type="number" id="dsr" name="dsr" required>
-            <label for="tackles">Tackles:</label>
-            <input type="number" id="tackles" name="tackles" required>
-            <label for="tsr">TSR (%):</label>
-            <input type="number" id="tsr" name="tsr" required>
-            <label for="offsides">Offsides:</label>
-            <input type="number" id="offsides" name="offsides" required>
-            <label for="fouls">Fouls:</label>
-            <input type="number" id="fouls" name="fouls" required>
-            <label for="possessionWon">Possession Won:</label>
-            <input type="number" id="possessionWon" name="possessionWon" required>
-            <label for="possessionLost">Possession Lost:</label>
-            <input type="number" id="possessionLost" name="possessionLost" required>
-            <label for="distanceCovered">Distance Covered (Km):</label>
-            <input type="number" id="distanceCovered" name="distanceCovered" required>
-            <label for="motm">MOTM:</label>
-            <input type="checkbox" id="motm" name="motm">
-            <button type="submit">Submit</button>
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="pin">PIN:</label>
+            <input type="password" id="pin" name="pin" required>
+            <button type="submit">Login</button>
         </form>
         <p id="message"></p>
-        <h2 id="players">Manage Players</h2>
-        <form id="managePlayersForm">
-            <label for="newPlayer">Add Player:</label>
-            <input type="text" id="newPlayer" name="newPlayer">
-            <button type="button" onclick="addPlayer()">Add Player</button>
-            <label for="removePlayer">Remove Player:</label>
-            <select id="removePlayer" name="removePlayer">
-                <!-- Options will be dynamically populated -->
-            </select>
-            <button type="button" onclick="removePlayer()">Remove Player</button>
-        </form>
     </div>
-    <script src="https://apis.google.com/js/api.js"></script>
-    <script src="script.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
