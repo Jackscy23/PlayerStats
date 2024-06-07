@@ -13,6 +13,8 @@ function login(event) {
     } else if (username === "player" && pincode === "player123") {
         // Redirect to player home page
         window.location.href = "player_home.html";
+        // Hide the home page link
+        document.getElementById('homeLink').style.display = "none";
     } else {
         document.getElementById('message').innerText = 'Invalid username or pincode';
     }
