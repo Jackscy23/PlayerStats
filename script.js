@@ -67,7 +67,8 @@ function addPlayer() {
 }
 
 function removePlayer() {
-    const playerToRemove = document.getElementById('removePlayer').value;
+    const removePlayerSelect = document.getElementById('removePlayer');
+    const playerToRemove = removePlayerSelect.value;
     const index = playerList.indexOf(playerToRemove);
     if (index !== -1) {
         playerList.splice(index, 1);
@@ -75,5 +76,6 @@ function removePlayer() {
         populatePlayerOptions();
     }
 }
+
 
 populatePlayerOptions();

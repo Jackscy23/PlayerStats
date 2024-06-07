@@ -9,10 +9,10 @@ body {
 .container {
     max-width: 90%;
     margin: 20px auto;
-    padding: 10px;
+    padding: 20px;
     border: 2px solid #ccc;
-    border-radius: 3px;
-    background-color: #7014A5;
+    border-radius: 5px;
+    background-color: #651696;
     color: #fff;
 }
 
@@ -20,11 +20,12 @@ h1 {
     text-align: center;
     font-size: 1.5em;
     color: #fff;
+    margin-bottom: 20px;
 }
 
 h2 {
-    margin-top: 20px;
     font-size: 1.2em;
+    color: #fff;
 }
 
 form {
@@ -32,15 +33,15 @@ form {
 }
 
 label {
-    margin-bottom: 10px;
+    display: block;
+    margin-bottom: 5px;
     font-size: 1.1em;
     color: #fff;
     font-weight: bold;
-    
 }
 
 input, select, button {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding: 10px;
     font-size: 1em;
     border-radius: 3px;
@@ -48,6 +49,7 @@ input, select, button {
     width: calc(100% - 22px); /* Adjust width to match dropdown */
     color: #000000;
     background-color: #ffffff;
+    box-sizing: border-box; /* Ensure padding doesn't increase width */
 }
 
 button {
@@ -55,21 +57,23 @@ button {
     color: #fff;
     border: none;
     cursor: pointer;
-    padding: 10px;
-    font-size: 1em;
-    border-radius: 3px;
-    width: 100%;
     font-weight: bold;
 }
 
 button:hover {
-    background-color: #000000;
+    background-color: #7a006b; /* Darken the color on hover */
 }
 
 #message {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-align: center;
-    margin-top: 10px;
     font-weight: bold;
     color: #fff;
+}
+
+.logo {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it's displayed as a block element */
+    margin: 0 auto 20px; /* Center the logo and add some bottom margin */
 }
