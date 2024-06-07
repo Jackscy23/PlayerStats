@@ -9,7 +9,7 @@ function updateSheet(event) {
         formDataObj[key] = value;
     });
 
-    fetch('https://script.google.com/macros/s/AKfycbwyLZ4HEkeNyBtQHBdJcWFIq-pvzItO7B45BYoYYwA7wsb_Tq96EjAFHhakvde26Im0/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbyyO57jz2-YDW4KmTA_PsOwWAGCcOX_z2EVOJS02a-PJzFGaQ0aWZ6ZABNd8HRRBaJb/exec', {
         method: 'POST',
         mode: 'cors',
         cache: 'no-cache',
