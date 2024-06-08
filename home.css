@@ -14,30 +14,12 @@ body {
     background-size: cover;
 }
 
-nav {
-    text-align: center;
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 20px;
-}
-
-.menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-.menu li a:hover {
-    text-decoration: underline;
 }
 
 .logo {
@@ -46,9 +28,38 @@ nav {
     margin: 20px 0;
 }
 
+nav {
+    width: 100%;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.menu li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #000;
+}
+
 .container {
-    position: relative;
-    width: 400px;
     background-color: rgba(0, 0, 0, 0.5);
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
@@ -56,51 +67,98 @@ nav {
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
+    width: 90%;
+    max-width: 600px;
 }
 
-h1 {
+h1, h2 {
     font-size: 2em;
     color: #fff;
+    margin-bottom: 20px;
 }
 
-p, label {
-    color: #fff;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-input, select, button {
+.form-group {
     width: 100%;
+    margin-bottom: 15px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+label {
+    color: #fff;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+select, input[type="text"], input[type="number"] {
+    width: 80%;
     padding: 10px;
-    margin: 10px 0;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
+    font-size: 1em;
+}
+
+input[type="checkbox"] {
+    margin-left: 10px;
 }
 
 button {
-    background-color: #9b018e;
-    color: #ffffff;
+    margin-top: 20px;
+    width: 80%;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #9900ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
 }
 
 button:hover {
-    background-color: #a903be;
+    background-color: #eb02f3b2;
+    transform: scale(1.05);
+}
+
+#message {
+    color: #fff;
+    font-size: 1.2em;
+    margin-top: 20px;
 }
 
 @media (max-width: 600px) {
-    .container {
-        width: 90%;
-    }
-
-    .menu {
-        flex-direction: column;
-    }
-
     .menu li {
         margin: 10px 0;
     }
 
-    .logo {
-        width: 100px;
+    .container {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    select, input[type="text"], input[type="number"] {
+        font-size: 0.9em;
+    }
+
+    .checkbox-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    input[type="checkbox"] {
+        margin-left: 0;
     }
 }

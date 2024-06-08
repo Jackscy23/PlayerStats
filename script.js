@@ -77,6 +77,18 @@ function removePlayer() {
     }
 }
 
+document.getElementById('logoutBtn').addEventListener('click', function() {
+    logout();
+});
 
+function logout() {
+    // Clear session data (replace this with your session management code)
+    // For example, remove access token, user information, etc.
+    // localStorage.removeItem('accessToken');
+    
+    // Redirect to homepage or login page
+    window.location.href = 'index.html';
+}
 
 populatePlayerOptions();
+

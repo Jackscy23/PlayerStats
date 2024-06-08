@@ -5,14 +5,31 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     display: flex;
-    justify-content: center;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Added to vertically center content */
+    flex-direction: column;
+    align-items: center;
     min-height: 100vh;
     width: 100%;
     background: url("BG-3.jpg");
     background-position: center;
     background-size: cover;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin: 20px 0;
+}
+
+nav {
+    width: 100%;
 }
 
 .menu {
@@ -21,7 +38,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center; /* Center menu items horizontally */
+    flex-wrap: wrap;
 }
 
 .menu li {
@@ -32,22 +49,26 @@ body {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    padding: 10px 20px;
+    transition: background 0.3s, color 0.3s;
 }
 
 .menu li a:hover {
-    text-decoration: underline;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #000;
 }
 
 .container {
-    position: relative;
-    width: 400px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(15px);
     padding: 20px;
     box-sizing: border-box;
-    text-align: center; /* Center text within the container */
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
 }
 
 h1 {
@@ -59,14 +80,8 @@ p {
     color: #fff;
 }
 
-.logo {
-    width: 150px; /* Adjust size as needed */
-    height: auto;
-    margin: 20px 0; /* Add margin for spacing */
-}
-
 @media (max-width: 600px) {
-    .container {
-        width: 90%;
+    .menu li {
+        margin: 10px 0;
     }
 }
